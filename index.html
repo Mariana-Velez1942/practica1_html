@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es"> <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Cava de Fuego - Asados al Barril</title> <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="/images/img_cava.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <a href="#inicio" aria-label="Ir a la sección de Inicio"> <img src="/images/img_cava.png" alt="Logo de La Cava de Fuego">
+        </a>
+        <h1>La Cava de Fuego</h1>
+    </header>
+
+    <nav aria-label="Menú principal de navegación"> <ul class="menu"> <!--aria-label define una cadena de texto que sirve como etiqueta para un elemento HTML. Se utiliza cuando no hay una etiqueta visible o cuando la etiqueta visible no es suficiente para describir el elemento de forma clara para los usuarios de tecnología de asistencia. -->
+            <li><a href="#inicio">Inicio</a></li> <li><a href="#menu">Menú</a></li>
+            <li><a href="#contactanos">Contáctanos</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <main> <section id="inicio" class="hero"> <h2>"Asados al barril con alma de leña y pasión artesanal"</h2> <!--Hero se coloca como identificador para css-->
+            </section>
+
+        <section id="menu" class="menu-section"> <h2>Nuestro Menú</h2> <p>Descubre nuestros cortes únicos y especialidades ahumadas directamente del barril.</p>
+
+            <div class="menu-container">
+                <article class="menu-card"> <h4>Bife de Chorizo al Barril</h4>
+                    <img src="/images/Bife_chorizo.webp" alt="Foto de Bife de Chorizo al Barril, jugoso y dorado.">
+                    <p>250g de corte argentino, asado lentamente al barril. Jugoso por dentro, dorado por fuera. Acompañado de papas rústicas y chimichurri de la casa.</p>
+                    <p class="price">$ 58.000 COP</p> </article>
+
+                <article class="menu-card">
+                    <h4>Punta de Anca Ahumada</h4>
+                    <img src="/images/punta_de_anca.png" alt="Foto de Punta de Anca Ahumada, con ensalada fresca.">
+                    <p>Corte colombiano con sabor intenso, cocinado al barril durante 4 horas con técnica lenta. Servido con ensalada fresca y yuca crocante.</p>
+                    <p class="price">$ 62.000 COP</p>
+                </article>
+
+                <article class="menu-card">
+                    <h4>Costillas de Cerdo a la Miel y Ajo</h4>
+                    <img src="/images/costillas_miel.png" alt="Foto de Costillas de Cerdo a la Miel y Ajo, caramelizadas.">
+                    <p>Costillas marinadas 24 horas en miel de panela, ajo y especias. Asadas al barril hasta quedar caramelizadas y suaves. Vienen con puré rústico de maíz y tomate asado.</p>
+                    <p class="price">$ 55.000 COP</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="specialties-section"> <h2>Especialidades de la Cava</h2>
+
+            <div class="menu-container">
+                <article class="menu-card">
+                    <h4>Barril de Sabores (Para Compartir)</h4>
+                    <img src="/images/barril-asador.webp" alt="Foto de un Barril Asador con diferentes cortes de carne y acompañamientos.">
+                    <p>Selección de carnes (Picaña, costilla, chorizo artesanal) servidas sobre tabla de madera, con papas al rescoldo, plátano maduro frito y salsa ají ahumado.</p>
+                    <p class="price">$ 200.000 COP</p>
+                </article>
+
+                <article class="menu-card">
+                    <h4>Trucha de Montaña al Fuego</h4>
+                    <img src="/images/trucha_barril.webp" alt="Foto de Trucha de Montaña cocinada al barril en hojas de plátano.">
+                    <p>Filete de trucha fresca, cocido en hojas de plátano y asado al barril con finas hierbas. Ideal para quienes buscan algo más ligero.</p>
+                    <p class="price">$ 70.000 COP</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="pairings-section"> <h2>Maridajes Sugeridos</h2>
+            <div class="menu-container">
+                <div class="menu-card full-width-card"> <img src="/images/vinos.png" alt="Ilustración de botellas de vino y copas.">
+                    <p>Próximamente consulta nuestra cava de vinos y cervezas artesanales para el acompañamiento perfecto.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contactanos" class="contact-section"> <h2>Contáctanos</h2>
+            <form action="/action_page.php" method="POST"> <label for="nombre">Nombre:</label><br>
+                <input type="text" id="nombre" name="nombre" required><br> <label for="apellido">Apellido:</label><br>
+                <input type="text" id="apellido" name="apellido" required><br>
+
+                <label for="telefono">Teléfono:</label><br>
+                <input type="tel" id="telefono" name="telefono" required><br><br> <input type="submit" value="Enviar">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 La Cava de Fuego. Todos los derechos reservados.</p> <div class="social-links"> <a href="#" class="fa fa-facebook" aria-label="Visítanos en Facebook"></a>
+            <a href="#" class="fa fa-whatsapp" aria-label="Contáctanos por WhatsApp"></a>
+            <a href="#" class="fa fa-instagram" aria-label="Síguenos en Instagram"></a>
+        </div>
+    </footer>
+</body>
+</html>

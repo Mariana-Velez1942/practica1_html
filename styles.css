@@ -1,0 +1,397 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f5f5f5; /* Un gris claro para el fondo de la pagina web */
+    color: #333; /* Color de texto oscuro para buena legibilidad para el usuario */
+    line-height: 1.6;
+    scroll-behavior: smooth; /* movimiento para los enlaces de navegación */
+}
+
+/* --- Encabezado --- */
+header {
+    background-color: #360101; /* Rojo/marrón oscuro, base de la paleta de la pagina*/
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header a {
+    text-decoration: none; /* Quitar el subrayado del enlace del logo */
+    color: inherit; /* Mantener el color del texto del padre contenedor */
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border: 3px solid #e0b240; /* Borde dorado, color de acento para mejorar estilo */
+    object-fit: cover; /* Asegura que la imagen se vea bien si no es perfectamente cuadrada y no perjudica el estilo */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700; /* Negrita más marcada */
+}
+
+/* --- Barra de Navegación --- */
+nav {
+    background-color: #5a0303; /* Rojo/marrón más claro para la navegación del menu */
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+    list-style: none; /* Quitar viñetas de la lista */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre los elementos del menú */
+}
+
+.menu li {
+    display: inline-block; /* Asegura que los ítems se muestren horizontalmente */
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 5px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #e0b240; /* Efecto dorado al pasar el mouse */
+    color: #360101; /* Cambiar color de texto al pasar el muose sobre el botton */
+    transform: translateY(-2px); /* Pequeño efecto de elevación */
+}
+
+/* --- Separador --- */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 40px auto;
+    width: 80%;
+    max-width: 1000px; /* Ancho máximo para la línea de separacion */
+}
+
+/* --- Secciones Generales --- */
+section {
+    padding: 60px 20px; /* Más padding vertical para mejor separación */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; /* Centrar el contenido de las secciones */
+}
+
+section:first-of-type { /* Ajuste para la primera sección si es el héroe */
+    padding-top: 30px;
+}
+
+section h1, section h2 {
+    font-size: 2.5em;
+    color: #360101;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 600; /* Seminegrita para títulos de sección */
+}
+
+section h1::after, section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #e0b240;
+}
+
+section p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 30px;
+    max-width: 800px; /* Limitar ancho del párrafo principal */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Contenedor de Tarjetas de Menú --- */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan a la siguiente línea */
+    justify-content: center; /* Centra las tarjetas horizontalmente */
+    gap: 30px; /* Espacio entre tarjetas */
+    margin-top: 40px;
+}
+
+/* --- Tarjeta de Menú  --- */
+.menu-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    /* Calcula el ancho para 3 tarjetas por fila, restando el espacio del gap */
+    width: calc(33.333% - 20px); /* Ajustado para mejor distribución, 20px es el gap dividiendolo por 3 */
+    box-sizing: border-box; /* Incluir el relleno en el ancho */
+    text-align: center; /* Centrar el contenido dentro de la tarjeta */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Apila el contenido verticalmente */
+    justify-content: space-between; /* Distribuye el espacio uniformemente */
+    min-height: 450px; /* Altura mínima para que todas las tarjetas se vean similares */
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menu-card h4 {
+    font-size: 1.8em;
+    color: #5a0303;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-align: center; /* Centrar los títulos de las tarjetas */
+    font-weight: 600;
+}
+
+.menu-card img {
+    max-width: 100%;
+    height: 200px; /* **Altura fija para que todas las imágenes sean uniformes** */
+    object-fit: cover; /* **Cubre el área sin distorsionar la proporción de la imagen** */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+}
+
+.menu-card p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1; /* Permite que el párrafo de descripción ocupe el espacio disponible */
+    line-height: 1.4; /* Mejora la legibilidad del texto */
+    text-align: center; /* Centra el texto de la descripción */
+}
+
+.menu-card .price {
+    font-weight: bold;
+    color: #360101;
+    font-size: 1.4em; /* Precio un poco más grande */
+    margin-top: auto; /* Empuja el precio hacia la parte inferior de la tarjeta */
+}
+
+/* --- Tarjeta de Ancho Completo (Ej. Maridajes) --- */
+.full-width-card {
+    width: 70% !important; /* Más ancho para esta tarjeta específica, ajustado */
+    max-width: 700px; /* Limitar el ancho máximo */
+    margin: 0 auto; /* Centrar esta tarjeta */
+    min-height: auto; /* Anular altura mínima si es una tarjeta de contenido diferente */
+}
+.full-width-card p {
+    font-size: 1.2em; /* Texto un poco más grande para esta tarjeta */
+}
+
+/* --- Formulario de Contacto --- */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: left; /* Alinea etiquetas e inputs a la izquierda dentro del formulario */
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #360101;
+}
+
+form input[type="text"],
+form input[type="tel"] { /* Aplica a ambos tipos de input */
+    width: calc(100% - 24px); /* Ajustando para padding y borde */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="tel"]:focus {
+    border-color: #e0b240; /* Borde dorado al enfocar */
+    outline: none; /* Quitar el contorno predeterminado del navegador */
+}
+
+form input[type="submit"] {
+    background-color: #e0b240;
+    color: #360101;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+form input[type="submit"]:hover {
+    background-color: #c9a13b;
+    transform: translateY(-2px);
+}
+
+/* --- Pie de Página --- */
+footer {
+    background-color: #360101;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+    font-size: 0.9em;
+    border-top: 3px solid #e0b240; /* Pequeña línea de acento en el footer */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+/* Iconos de Redes Sociales */
+.fa {
+    padding: 15px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 0 8px;
+    border-radius: 50%;
+    color: white;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.fa:hover {
+    opacity: 0.8;
+    transform: scale(1.1); /* Efecto de crecimiento al pasar el ratón */
+}
+
+.fa-facebook {
+    background: #3B5998;
+}
+
+.fa-whatsapp {
+    background: #25D366;
+}
+
+.fa-instagram {
+    background: #C13584;
+}
+
+/* --- Diseño Responsivo --- */
+@media (max-width: 992px) {
+    .menu-card {
+        width: calc(50% - 20px); /* 2 tarjetas por fila en pantallas medianas */
+        min-height: 420px; /* Ajuste de altura mínima */
+    }
+    .full-width-card {
+        width: calc(90% - 20px) !important; /* Más ancho en tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .menu {
+        flex-direction: column; /* Apilar el menú de navegación */
+        gap: 10px;
+    }
+
+    .menu a {
+        padding: 10px;
+        display: block; /* Ocupa todo el ancho disponible */
+    }
+
+    section {
+        padding: 40px 15px; /* Menos padding en pantallas pequeñas */
+    }
+
+    section h1, section h2 {
+        font-size: 2em;
+    }
+
+    section p {
+        font-size: 1em;
+    }
+
+    .menu-card {
+        width: calc(100% - 20px); /* 1 tarjeta por fila en pantallas pequeñas */
+        min-height: auto; /* Permitir que la altura se ajuste al contenido */
+    }
+
+    .menu-card img {
+        height: 180px; /* Imágenes ligeramente más pequeñas */
+    }
+
+    .full-width-card {
+        width: calc(100% - 20px) !important; /* Ancho completo en móviles */
+    }
+
+    form {
+        padding: 20px;
+        margin: 30px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    header h1 {
+        font-size: 1.6em;
+    }
+
+    .menu a {
+        font-size: 1em;
+    }
+
+    section h1, section h2 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .menu-card h4 {
+        font-size: 1.5em;
+    }
+
+    .menu-card img {
+        height: 150px;
+    }
+
+    .menu-card .price {
+        font-size: 1.2em;
+    }
+}
